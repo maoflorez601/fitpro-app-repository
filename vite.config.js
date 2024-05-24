@@ -11,4 +11,7 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: { //se configura el vite para que retorne peticiones https
+        https: true,
+    },
 });
