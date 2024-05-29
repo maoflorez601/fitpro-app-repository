@@ -60,7 +60,8 @@ class FoodController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $food = Food::findOrFail($id); 
+        return view('foods.edit', compact('food'));
     }
 
     /**
@@ -68,7 +69,18 @@ class FoodController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // Se crea validador para definir formato de cada campo
+        $request->validate([
+            'name' => 'required|string|min:2|max:100',
+            'category' => 'required|string|min:2|max:100',
+            'protein' => 'required|numeric',
+            'carbs' => 'required|numeric',
+            'fat' => 'required|numeric',
+        ]);
+
+        $food = Food::findOrFail($id);
+        $food->update($request->all());
+        return redirect()->route('foods.index');
     }
 
     /**
@@ -76,6 +88,8 @@ class FoodController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $food = Food::findOrFail($id);
+        $food->delete();
+        return redirect()->route('foods.index');
     }
 }
