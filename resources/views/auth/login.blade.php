@@ -1,13 +1,8 @@
-<x-guest-layout>
-    <div class="min-h-screen flex items-center justify-center" style="background-image: url('https://media.revistagq.com/photos/60e6c8d727e8735e0f6e92a3/16:9/w_2560,c_limit/DESPLANTES.jpg'); background-size: cover; background-position: center;">
-        <div class="bg-white>
-            <x-authentication-card>
-                <x-slot name="logo">
-                    <div class="flex justify-center mb-4">
-                        <img src="{{ asset('images/logo.png') }}" alt="logo_fitpro" class="block h-20 w-auto" />
-                    </div>
-                </x-slot>
-
+<x-<x-guest-layout>
+    <div class="min-h-screen flex flex-col items-center justify-center" style="background-image: url('https://media.revistagq.com/photos/60e6c8d727e8735e0f6e92a3/16:9/w_2560,c_limit/DESPLANTES.jpg'); background-size: cover; background-position: center;">
+        <img src="{{ asset('images/logo.png') }}" alt="logo_fitpro" class="mb-8 h-20 w-auto" />
+        <div class="bg-white rounded-lg shadow-md w-96">
+            <div class="p-5 md:p-8">
                 <x-validation-errors class="mb-4" />
 
                 @if (session('status'))
@@ -19,50 +14,63 @@
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
 
-                    <div>
+                    <div class="mb-4">
                         <x-label for="email" value="{{ __('Email') }}" />
                         <x-input id="email" class="block mt-1 w-full rounded-md" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
                     </div>
 
-                    <div class="mt-4">
+                    <div class="mb-4">
                         <x-label for="password" value="{{ __('Password') }}" />
                         <x-input id="password" class="block mt-1 w-full rounded-md" type="password" name="password" required autocomplete="current-password" />
                     </div>
 
-                    <div class="block mt-4">
+                    <div class="block mb-4">
                         <label for="remember_me" class="flex items-center">
                             <x-checkbox id="remember_me" name="remember" />
                             <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
                         </label>
                     </div>
 
-                    <div class="flex items-center justify-end mt-4 forgpass">
+                    <div class="flex items-center justify-between mt-4">
                         @if (Route::has('password.request'))
                             <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
                                 {{ __('Forgot your password?') }}
                             </a>
                         @endif
 
-                        <x-button class="buttlogin">
+                        <x-button>
                             {{ __('Log in') }}
                         </x-button>
                     </div>
                 </form>
-            </x-authentication-card>
+
+                <div class="mt-4 text-center">
+                    <span class="text-sm text-gray-600 dark:text-gray-400">{{ __("Don't have an account?") }}</span>
+                    <a href="{{ route('register') }}" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">{{ __('Click here') }}</a>
+                </div>
+            </div>
         </div>
     </div>
 </x-guest-layout>
 
 <style>
-    .mforgpass{
-    
-        padding: 20px 20px 20px 20px;
+    .mb-4 {
+        margin-bottom: 20px;
     }
     
-    .buttlogin {
-        margin: 20px 20px 20px 20px;
+    .p-5 {
+        padding: 20px;
     }
     
+    .md\:p-8 {
+        padding: 32px;
+    }
     
+    .w-96 {
+        width: 24rem; /* 384px */
+    }
     
-    </style>
+    .shadow-md {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+</style>
