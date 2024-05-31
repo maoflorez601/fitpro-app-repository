@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\HealthProfileController;
+use App\Http\Controllers\ExerciseRoutineController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,5 +20,6 @@ Route::middleware([
 
     // Agregar entidad rutas
     Route::resource('foods', FoodController::class);
-    Route::resource('healthProfiles', HealthProfileController::class);
+    Route::resource('health_profiles', HealthProfileController::class);
+    Route::resource('exercise_routines', ExerciseRoutineController::class);
 });

@@ -11,7 +11,9 @@ class HealthProfile extends Model
 
     // protege los campos contra la excepcion de asignacion masiva (MassAssigmentException) 
     protected $fillable = [
-        'pathology_group',
+        'user_email',
+        'height',
+        'weight',
         'pathology',
         'hearth_rate',
         'systole',

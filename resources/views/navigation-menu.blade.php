@@ -13,7 +13,7 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('healthProfiles.index') }}" :active="request()->routeIs('healthProfiles.index')">
+                    <x-nav-link href="{{ route('health_profiles.index') }}" :active="request()->routeIs('health_profiles.index')">
                         {{ __('Perfil de Salud') }}
                     </x-nav-link>
                 </div>
@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="#" :active="request()->routeIs('')">
+                    <x-nav-link href="{{ route('exercise_routines.index') }}" :active="request()->routeIs('')">
                         {{ __('Rutinas de Ejercicio') }}
                     </x-nav-link>
                 </div>
