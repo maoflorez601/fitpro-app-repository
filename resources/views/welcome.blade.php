@@ -39,7 +39,7 @@
                                     <a
                                         href="{{ route('login') }}"
                                         class="rounded-md px-3 py-2 text-orange-500 ring-1 ring-transparent transition hover:text-orange-700 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-orange-500 dark:hover:text-orange-700 dark:focus-visible:ring-white"
-                                        style="color: #d856ad; font-size: 2rem;"
+                                        style="color: #5856d8; font-size: 2rem;"
                                     >
                                         Log in
                                     </a>
@@ -48,7 +48,7 @@
                                         <a
                                             href="{{ route('register') }}"
                                             class="rounded-md px-3 py-2 text-orange-500 ring-1 ring-transparent transition hover:text-orange-700 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-orange-500 dark:hover:text-orange-700 dark:focus-visible:ring-white"
-                                            style="color: #d856ad; font-size: 2rem;"
+                                            style="color: #5856d8; font-size: 2rem;"
                                         >
                                             Register
                                         </a>
