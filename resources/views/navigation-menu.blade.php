@@ -6,14 +6,14 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        {{-- <x-application-mark class="block h-9 w-auto" /> --}}
-                        <img src="{{ asset('images/logo_light.png') }}" alt="logo_fitpro_light" class="block h-12 w-auto">
+                        <img src="{{ asset('images/logo.png') }}" alt="logo_fitpro" class="block h-9 w-auto" />
                     </a>
                 </div>
+                
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('healthProfiles.index') }}" :active="request()->routeIs('healthProfiles.index')">
+                    <x-nav-link href="{{ route('health_profiles.index') }}" :active="request()->routeIs('health_profiles.index')">
                         {{ __('Perfil de Salud') }}
                     </x-nav-link>
                 </div>
@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="#" :active="request()->routeIs('')">
+                    <x-nav-link href="{{ route('exercise_routines.index') }}" :active="request()->routeIs('')">
                         {{ __('Rutinas de Ejercicio') }}
                     </x-nav-link>
                 </div>
