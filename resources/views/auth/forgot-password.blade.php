@@ -5,8 +5,11 @@
             <div class="p-5 md:p-8">
 
                 <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-                    {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+                    <p style="text-align: justify;">
+                        {{ __('¿Olvidaste tu contraseña? Ningún problema. Simplemente bríndanos tu dirección de correo electrónico y le enviaremos un enlace para restablecer su contraseña.') }}
+                    </p>
                 </div>
+                
 
                 @if (session('status'))
                     <div class="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
@@ -20,14 +23,14 @@
                     @csrf
 
                     <div class="mb-4">
-                        <x-label for="email" value="{{ __('Email') }}" />
+                        <x-label for="email" value="{{ __('Correo Electrónico') }}" />
                         <x-input id="email" class="block mt-1 w-full rounded-md" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
                     </div>
 
                     <div class="flex items-center justify-between buttonS">
-                        <a href="{{ route('login') }}" class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">Cancel</a>
+                        <a href="{{ route('login') }}" class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">Cancelar</a>
                         <x-button>
-                            {{ __('Email Password Reset Link') }}
+                            {{ __('Enviar enlace') }}
                         </x-button>
                     </div>
                 </form>
@@ -37,16 +40,15 @@
 </x-guest-layout>
 
 <style>
-.mb-4{
-
-    padding: 20px 20px 20px 20px;
+.mb-4 {
+    padding: 20px;
 }
 
 .buttonS {
-
- padding: 20px 20px 20px 20px;
+    margin: 20px;
 }
 
-
-
+.text-sm p {
+    text-align: justify;
+}
 </style>

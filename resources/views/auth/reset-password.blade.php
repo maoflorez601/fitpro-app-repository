@@ -12,24 +12,24 @@
                     <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
                     <div class="mb-4">
-                        <x-label for="email" value="{{ __('Email') }}" />
+                        <x-label for="email" value="{{ __('Correo Electróico') }}" />
                         <x-input id="email" class="block mt-1 w-full rounded-md" type="email" name="email" :value="old('email', $request->email)" required autofocus autocomplete="username" />
                     </div>
 
                     <div class="mb-4">
-                        <x-label for="password" value="{{ __('Password') }}" />
+                        <x-label for="password" value="{{ __('Contraseña') }}" />
                         <x-input id="password" class="block mt-1 w-full rounded-md" type="password" name="password" required autocomplete="new-password" />
                     </div>
 
                     <div class="mb-4">
-                        <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                        <x-label for="password_confirmation" value="{{ __('Confirmar Contraseña') }}" />
                         <x-input id="password_confirmation" class="block mt-1 w-full rounded-md" type="password" name="password_confirmation" required autocomplete="new-password" />
                     </div>
 
                     <div class="flex items-center justify-between mt-4">
                         <a href="{{ route('login') }}" class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">Cancel</a>
                         <x-button>
-                            {{ __('Reset Password') }}
+                            {{ __('Restablecer contraseña') }}
                         </x-button>
                     </div>
                 </form>

@@ -15,38 +15,38 @@
                     @csrf
 
                     <div class="mb-4">
-                        <x-label for="email" value="{{ __('Email') }}" />
+                        <x-label for="email" value="{{ __('Correo electrónico') }}" />
                         <x-input id="email" class="block mt-1 w-full rounded-md" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
                     </div>
 
                     <div class="mb-4">
-                        <x-label for="password" value="{{ __('Password') }}" />
+                        <x-label for="password" value="{{ __('Contraseña') }}" />
                         <x-input id="password" class="block mt-1 w-full rounded-md" type="password" name="password" required autocomplete="current-password" />
                     </div>
 
                     <div class="block mb-4">
                         <label for="remember_me" class="flex items-center">
                             <x-checkbox id="remember_me" name="remember" />
-                            <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
+                            <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Recuerdame') }}</span>
                         </label>
                     </div>
 
                     <div class="flex items-center justify-between mt-4">
                         @if (Route::has('password.request'))
                             <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                                {{ __('Forgot your password?') }}
+                                {{ __('Olvidaste tu contraseña?') }}
                             </a>
                         @endif
 
                         <x-button>
-                            {{ __('Log in') }}
+                            {{ __('Ingresar') }}
                         </x-button>
                     </div>
                 </form>
 
                 <div class="mt-4 text-center">
-                    <span class="text-sm text-gray-600 dark:text-gray-400">{{ __("Don't have an account?") }}</span>
-                    <a href="{{ route('register') }}" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">{{ __('Click here') }}</a>
+                    <span class="text-sm text-gray-600 dark:text-gray-400">{{ __("No tienes una cuenta?") }}</span>
+                    <a href="{{ route('register') }}" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">{{ __('Click aqui') }}</a>
                 </div>
             </div>
         </div>
