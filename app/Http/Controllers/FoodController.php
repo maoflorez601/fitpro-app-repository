@@ -92,4 +92,5 @@ class FoodController extends Controller
         $food->delete();
         return redirect()->route('foods.index');
     }
+    protected $fillable = ['name','category','protein','carbs','fat']; 
 }
