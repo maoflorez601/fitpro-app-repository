@@ -71,5 +71,10 @@
                 </div>
             </div>
         </div>
+        <script>
+            @auth
+                window.location.href = "{{ url('/dashboard') }}";
+            @endauth
+        </script>
     </body>
 </html>
