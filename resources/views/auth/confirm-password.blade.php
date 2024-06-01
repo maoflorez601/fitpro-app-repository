@@ -5,7 +5,7 @@
             <div class="p-5 md:p-8">
 
                 <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-                    {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
+                    {{ __('Esta es un área segura de la aplicación. Confirme su contraseña antes de continuar.') }}
                 </div>
 
                 <x-validation-errors class="mb-4" />

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>FitPro</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -30,10 +30,10 @@
                                 @auth
                                     <a
                                         href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        
+                                        class="rounded-md px-3 py-2 text-orange-500 ring-1 ring-transparent transition hover:text-orange-700 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-orange-500 dark:hover:text-orange-700 dark:focus-visible:ring-white"
+                                        style="color: #5856d8; font-size: 2rem;"
                                     >
-                                        Dashboard
+                                        Inicio
                                     </a>
                                 @else
                                     <a
@@ -41,7 +41,7 @@
                                         class="rounded-md px-3 py-2 text-orange-500 ring-1 ring-transparent transition hover:text-orange-700 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-orange-500 dark:hover:text-orange-700 dark:focus-visible:ring-white"
                                         style="color: #5856d8; font-size: 2rem;"
                                     >
-                                        Log in
+                                        Iniciar sesion
                                     </a>
 
                                     @if (Route::has('register'))
@@ -50,7 +50,7 @@
                                             class="rounded-md px-3 py-2 text-orange-500 ring-1 ring-transparent transition hover:text-orange-700 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-orange-500 dark:hover:text-orange-700 dark:focus-visible:ring-white"
                                             style="color: #5856d8; font-size: 2rem;"
                                         >
-                                            Register
+                                            Registrarse
                                         </a>
                                     @endif
                                 @endauth

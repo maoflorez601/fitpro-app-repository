@@ -6,21 +6,29 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="{{ asset('images/logo.png') }}" alt="logo_fitpro" class="block h-9 w-auto" />
+                        {{-- <x-application-mark class="block h-9 w-auto" /> --}}
+                        <img src="{{ asset('images/logo.png') }}" alt="logo_fitpro" class="block h-12 w-auto dark:shadow-lg">
+
                     </a>
                 </div>
-                
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('healthProfiles.index') }}" :active="request()->routeIs('healthProfiles.index')">
+                        {{ __('Perfil de Salud') }}
+                    </x-nav-link>
+                </div>
+
+                
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('foods.index') }}" :active="request()->routeIs('foods.index')">
-                        {{ __('Food') }}
+                        {{ __('Gestionar Alimentos') }}
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('foods.create') }}" :active="request()->routeIs('foods.index')">
-                        {{ __('Rutines') }}
+                    <x-nav-link href="#" :active="request()->routeIs('')">
+                        {{ __('Rutinas de Ejercicio') }}
                     </x-nav-link>
                 </div>
             </div>
